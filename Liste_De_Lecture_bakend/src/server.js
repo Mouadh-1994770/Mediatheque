@@ -17,6 +17,10 @@ app.get('/api/pieces', (requete, reponse) => {
     reponse.status(200).json(pieces);
 });
 
+app.get('/api/pieces/:references', (requete, reponse) => {
+    reponse.status(400).json(pieces);
+});
+
 app.get('/api/pieces/:id', (requete, reponse) => {
 const id = requete.params.id;
     reponse.status(200).json(id);
